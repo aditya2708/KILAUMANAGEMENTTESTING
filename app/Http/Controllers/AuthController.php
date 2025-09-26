@@ -321,7 +321,7 @@ class AuthController extends Controller
         }elseif (Auth::guard('kolektor')->check()){
             Auth::guard('kolektor')->logout();
         }
-        return redirect('https://home.kilauindonesia.org/');
+        return redirect('/');
     }
     
     public function store(Request $request){
