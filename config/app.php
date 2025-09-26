@@ -58,6 +58,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Frontend Origin
+    |--------------------------------------------------------------------------
+    |
+    | This value determines which origin is allowed to access the API when
+    | handling cross-origin requests. Set this value in your ".env" file.
+    |
+    */
+
+    'frontend_origin' => env('FRONTEND_ORIGIN', 'https://home.kilauindonesia.org'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Timezone
     |--------------------------------------------------------------------------
     |

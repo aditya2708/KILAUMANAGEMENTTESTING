@@ -8,7 +8,11 @@ class Cors
     public function handle($request, Closure $next)
     {
         $response = $next($request);
-        $response->header('Access-Control-Allow-Origin', 'https://home.kilauindonesia.org');
+        $origin = config('app.frontend_origin', '*');
+
+        if (! empty($origin)) {
+            $response->header('Access-Control-Allow-Origin', $origin);
+        }
         $response->header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, DELETE, PUT');
         $response->header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
         $response->header('Access-Control-Allow-Credentials', 'true');
