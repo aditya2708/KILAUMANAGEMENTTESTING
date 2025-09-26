@@ -31,7 +31,7 @@ return [
     ],
     
     'kilau_api' => [
-        'base_uri' => 'https://kilauindonesia.org/kilau/api/',
+        'base_uri' => env('KILAU_API_BASE_URI', 'https://kilauindonesia.org/kilau/api/'),
         'timeout' => 5, // Waktu timeout dalam detik
     ],
 
