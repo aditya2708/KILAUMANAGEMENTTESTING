@@ -71,8 +71,7 @@ Route::get('tes-email', function () {
 });
 
 Route::get('/', function () {
-    // return view('auth.login');
-    return redirect('https://home.kilauindonesia.org/');
+    return view('auth.login');
 });
 Route::get('/fcm',[FcmController::class, 'index']);
 
